@@ -1,0 +1,112 @@
+.table{
+	background-image: url("../images/table.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-between;
+	padding:50px 140px;
+	padding-top:8rem;
+	color: white;
+}
+.table-wrapper2{
+	text-align: right;
+	width: 45vw;
+}
+.table-wrapper2 h1{
+	font-size: 48px;
+	font-weight: 300;
+}
+.table-wrapper2 p{
+	margin-top: 1rem;
+	letter-spacing: 0.2;
+	line-height: 25px;
+	font-size: 15px;
+	color:rgba(250,250,250,0.9);
+	margin-left: 4rem;
+}
+.para-flex{
+	display: flex; 
+	justify-content: space-between;
+	margin-top: 1.5rem;
+}
+.table input,select{
+	background-color: transparent;
+	border:1px solid #fff;
+	padding:10px 15px;
+	color: white;
+	width: 21.6vw;
+	height: 7vh;
+	border-radius: 3px;
+	font-size: 16px;
+	outline: none;
+	padding-right: 50px;
+}
+option{
+	background-color: #84b813;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+::placeholder{
+	color: white;
+}
+
+.table input[type=number]::-webkit-outer-spin-button,
+.table input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.table input[type=date],[type=time]{
+	padding-right: 10px;
+}
+.submit{
+	width: 15.6vw;
+	height: 7vh;
+	font-size: 16px;
+	border:0px;
+	border-radius: 5px;
+	background-color: #84b813;
+	padding: 10px 20px;
+	color: white;
+}
+.submit:hover{
+	background-color: #e02f46;
+}
+.indicator{
+	position: absolute;
+	margin-left: -23px;
+	margin-top: 18px;
+	width: 10px;
+	height: 10px;
+	background: transparent;
+	border-radius: 50%;
+}
+#validemail.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validemail.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
+
+#validname.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validname.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
+#validtel.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validtel.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
+

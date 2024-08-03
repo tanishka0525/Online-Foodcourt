@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<head>
+  <title>Hungry Point</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet/navbar.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/sidebar.css">
+  <link rel="stylesheet" href="stylesheet/cart.css">
+  <link rel="stylesheet" href="stylesheet/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">   
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <div class="logo">
+          <span style="color: white;font-family: cursive;"> Hungry </span>Point.
+        </div>
+        <div class="list">
+            <ul>
+                <a href="home page.html"><li>Home</li></a>
+                <a href="about us.html"><li>About</li></a>
+                <a href="reservation.html"><li>Reservation</li></a>
+                <a href="menu.html"><li class="menu">Menu</li></a>
+                <a href="login.html"><li>Account</li></a>
+                <li>
+                    <div class="shopping-cart">
+                    <i class="fas fa-shopping-cart shoppingCartButton" id="menuButton"></i>
+                    <span id="sum-count"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="navbarbuttons">
+            <img src="images/search.png" style="margin-right: 20px;margin-top: 3px;" class="openBtn" onclick="openSearch()">
+            <input type="checkbox" class="checkbox">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="login.html" class="line">Account</a></li>
+                    <li><a href="#" class="line">Blogs</a></li>
+                    <li><a href="#" class="line">Your Orders</a></li>
+                    <li><a href="#" class="line">Cancel Order</a></li>
+                    <li><a href="#" class="line">Track Order</a></li>
+                    <li class="icons"><i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-instagram"></i>
+                </li>
+                <li class="design">
+                    <i class="fa fa-copyright" style="margin-left: 20px;"> 2021 Copyright</i><br>
+                    <span style="margin-left: 20px;">Designed By Lavanya</span>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--search button fullscreen-->
+<div id="mysearch_fullscreen" class="search_fullscreen">
+  <span class="closebtn" onclick="closeSearch()">×</span>
+  <div class="search_fullscreen-content">
+    <form>
+      <input type="text" placeholder="Search.." name="search">
+      <i class="fa fa-search" id="submit-search"></i>
+    </form>
+  </div>
+</div>
+</header>
+        <div class="for-scroll hide">
+            <div class="top">
+                 <button id="closeButton"><i class="fas fa-times-circle"></i></button>
+            </div>
+        <div class="display-flex">
+            <div id="container2">
+                
+            </div>
+            <footer id="details">
+                <div class="clearfix" id="container3">
+                    <h2>Confirm Your Order</h2>
+                    <div class="customer_id">
+                        <div><img src="images/id.svg"></div>
+                        <div>
+                            <span style="color: rgba(0,0,0,85%);">Lavanya</span><br>
+                            <span>8360033042</span>
+                        </div>
+                        <div id="edit">
+                            <i ></i>
+                            Edit
+                        </div>
+                    </div>
+                    <div id="input">
+                        <div>
+                            <input type="text" name="" placeholder="Enter Pincode">
+                        </div>
+                        <div id="check_delivery">
+                            Check&nbsp;Delivery
+                        </div>
+                    </div>
+                    <div id="coupon">
+                        <div><img src="images/coupon.svg"></div>
+                        <div id="margin-coupon">Apply Coupon</div>
+                    </div>
+                    <h3 id="price-heading">Price Details</h3>
+                    <div id="prices">
+                        <div class="left">
+                            <h4>Subtotal:</h4>
+                            <h4>Taxes&nbsp;(2%):</h4>
+                            <h4>Shipping:</h4>
+                        </div>
+                    <div class="item-price">
+                        <h3 class="subtotal"><span id="sum-prices"></span></h3>
+                        <h3 class="tax"><span id="tax"></span></h3>
+                        <h3 class="shipping"><span id="shipping">Free</span></h3>
+                    </div>
+                </div>
+
+            <div class="right">
+                <h1 class="total">Grand Total: <span id="total"></span></h1>
+                <a class="checkout checkout hidden">Checkout</a>
+            </div>
+
+        </div>
+    </footer>
+        </div>
+    </div>
+       
+
+<main>
+       <div class="container1">
+        <img src="images/banner.png" height="95" width="1080" style="margin-top: 80px;">
+        <h2><span style="border-bottom: 3px solid #84b813;font-family: consolas;padding-bottom: 6px;">50</span><span style="border-bottom: 3px dashed #84b813;font-family: consolas;padding-bottom: 6px;"> + </span>Exciting Dishes</h2><br>
+    </div>
+
+
+    <div class="container2">
+        <div class="product">
+            <div class="wrapper">
+                <img src="images/dish1.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Caramel Milk Shake</h3>
+                        <button id="d1_btn1" onclick="d1_del1_c(); d1_price1_c()">Large</button>
+                        <button id="d1_btn2" onclick="d1_del2_c(); d1_price2_c()">Medium</button>
+                        <button id="d1_btn3" onclick="d1_del3_c(); d1_price3_c()">Small</button>
+                        <button id="d1_btn4" onclick="d1_del4_c(); d1_price4_c()">Combos</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Offer Price</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d1_del">150</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d1_price"> 120</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="1">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="product">
+            <div class="wrapper">
+                <img src="images/dish2.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Stuff Crust Pizza</h3>
+                        <button id="d2_btn1" onclick="d2_del1_c(); d2_price1_c()">Regular</button>
+                        <button id="d2_btn2" onclick="d2_del2_c(); d2_price2_c()">Medium</button>
+                        <button id="d2_btn3" onclick="d2_del3_c(); d2_price3_c()">Large</button>
+                        <button id="d2_btn4" onclick="d2_del4_c(); d2_price4_c()">Giant Slice</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Special Price</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d2_del">120</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d2_price"> 100</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="2">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container2">
+        <div class="product">
+            <div class="wrapper">
+                <img src="images/dish3.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Italian Chicken Combo</h3>
+                        <button id="d3_btn1" onclick="d3_del1_c(); d3_price1_c()">Full Plate</button>
+                        <button id="d3_btn2" onclick="d3_del2_c(); d3_price2_c()">Half Plate</button>
+                        <button id="d3_btn3" onclick="d3_del3_c(); d3_price3_c()">Combo @2</button>
+                        <button id="d3_btn4" onclick="d3_del4_c(); d3_price4_c()">Bevarages</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Super Deal</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d3_del">450</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d3_price"> 400</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="3">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="product">
+            <div class="wrapper">
+                <img src="images/dish4.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Sweet Flood Cup</h3>
+                        <button id="d4_btn1" onclick="d4_del1_c(); d4_price1_c()">Strawberry</button>
+                        <button id="d4_btn2" onclick="d4_del2_c(); d4_price2_c()">Berries</button>
+                        <button id="d4_btn3" onclick="d4_del3_c(); d4_price3_c()">Mango</button>
+                        <button id="d4_btn4" onclick="d4_del4_c(); d4_price4_c()">Litchi</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Cracking Deal</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d4_del">200</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d4_price"> 90</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="4">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container2">
+        <div class="product">
+            <div class="wrapper">
+                <img src="images/dish5.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">HotChiDog - Chicken HotDog</h3>
+                        <button id="d5_btn1" onclick="d5_del1_c(); d5_price1_c()">Full Stuffed</button>
+                        <button id="d5_btn2" onclick="d5_del2_c(); d5_price2_c()">Half Stuffed</button>
+                        <button id="d5_btn3" onclick="d5_del3_c(); d5_price3_c()">Single</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Special Price</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d5_del">220</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d5_price"> 150</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="5">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="product">
+            <div class="wrapper">
+                <img src="images/dish6.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Beep Burger</h3>
+                        <button id="d6_btn1" onclick="d6_del1_c(); d6_price1_c()">Chicken</button>
+                        <button id="d6_btn2" onclick="d6_del2_c(); d6_price2_c()">Veg</button>
+                        <button id="d6_btn3" onclick="d6_del3_c(); d6_price3_c()">Single Tikki</button>
+                        <button id="d6_btn4" onclick="d6_del4_c(); d6_price4_c()">Double Combo</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Beep Price</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d6_del">120</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d6_price"> 80</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="6">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container2">
+        <div class="product">
+            <div class="wrapper">
+                <img src="images/dish7.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Crunchy Nut Coleslaw</h3>
+                        <button id="d7_btn1" onclick="d7_del1_c(); d7_price1_c()">Full Plate</button>
+                        <button id="d7_btn2" onclick="d7_del2_c(); d7_price2_c()">Half Plate</button>
+                        <button id="d7_btn3" onclick="d7_del3_c(); d7_price3_c()">Deals</button>
+                        <button id="d7_btn4" onclick="d7_del4_c(); d7_price4_c()">Bevarages</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Special Offer</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d7_del">180</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d7_price"> 150</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="7">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="product">
+            <div class="wrapper">
+                <img src="images/dish8.gif" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Crack Chocolate Cake</h3>
+                        <button id="d8_btn1" onclick="d8_del1_c(); d8_price1_c()">1kg</button>
+                        <button id="d8_btn2" onclick="d8_del2_c(); d8_price2_c()">2kg</button>
+                        <button id="d8_btn3" onclick="d8_del3_c(); d8_price3_c()">3kg</button>
+                        <button id="d8_btn4" onclick="d8_del4_c(); d8_price4_c()">4kg</button>
+                        <button id="d8_btn5" onclick="d8_del5_c(); d8_price5_c()">5kg</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Today's Deal</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d8_del">550</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d8_price"> 480</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="8">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container2">
+        <div class="product">
+            <div class="wrapper">
+                <img src="images/dish9.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Fresh Veggies Wrap</h3>
+                        <button id="d9_btn1" onclick="d9_del1_c(); d9_price1_c()">Full Plate</button>
+                        <button id="d9_btn2" onclick="d9_del2_c(); d9_price2_c()">Half Plate</button> 
+                        <button id="d9_btn3" onclick="d9_del3_c(); d9_price3_c()">Deals</button>
+                        <button id="d9_btn4" onclick="d9_del4_c(); d9_price4_c()">Bevarages</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">10% Off</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d9_del">200</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d9_price"> 180</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="9">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="product">
+            <div class="wrapper">
+                <img src="images/dish10.jpg" width="527" height="350">
+                <br>
+            <div class="wrapper2">
+                <span id="change1">
+                    <h3 class="productName">Pulp Pudding</h3>
+                        <button id="d10_btn1" onclick="d10_del1_c(); d10_price1_c()">Big</button>
+                        <button id="d10_btn2" onclick="d10_del2_c(); d10_price2_c()">Medium</button>
+                        <button id="d10_btn3" onclick="d10_del3_c(); d10_price3_c()">Small</button>
+                        <button id="d10_btn4" onclick="d10_del4_c(); d10_price4_c()">Cup Cake</button>
+                </span>
+            </div>
+            <div class="wrapper3">
+                <div class="subwrapper1">
+                    <span class="offer-name">Special Price</span>
+                    <span id="change1" class="price">
+                        <del class="deleted-price" style="margin-right: -4px;">₹</del>
+                        <del class="deleted-price" id="d10_del">150</del>
+                        <span class="final-price">&nbsp;₹</span>
+                        <button class="final-price priceValue" id="d10_price"> 130</button>
+                    </span>
+                </div>
+                <div class="subwrapper3">
+                    <button class="btn btn-small addToCart" data-product-id="10">
+                        Order Now </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    
+<!--footer-->
+<div class="footer">
+    <div class="footer-flex">
+    <i id="icon-1" class="fab fa-facebook-f"></i>
+    <i id="icon-2" class="fab fa-twitter"></i>
+    <i id="icon-3" class="fab fa-google"></i>
+    <i id="icon-4" class="fab fa-linkedin-in"></i>
+    <i id="icon-5" class="fab fa-instagram"></i>
+</div>
+<center><span>@ HungryPoint ------------ Made by Lavanya Dani</span></center>
+</div>          
+
+
+
+
+
+
+
+<script src="javascript/search.js"></script>
+<script src="javascript/menu.js"></script>
+<script src="javascript/cartpage.js"></script>
+<script src="javascript/shopping-cart.js"></script>
+</body>
+</html>

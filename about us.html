@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet/navbar.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet/cart.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet/about us.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<title>Hungry Point</title>
+</head>
+<body>
+
+   <!---navbar, sidebar and add to cart code--->
+<header>
+	<div class="navbar">
+		<div class="logo">
+		  <span style="color: white;font-family: cursive;"> Hungry </span>Point.
+		</div>
+		<div class="list">
+			<ul>
+				<a href="home page.html"><li>Home</li></a>
+				<a href="about us.html"><li class="about_us">About</li></a>
+				<a href="reservation.html"><li>Reservation</li></a>
+				<a href="menu.html"><li>Menu</li></a>
+				<a href="login.html"><li>Account</li></a>
+				<li>
+                    <div class="shopping-cart">
+                    <i class="fas fa-shopping-cart shoppingCartButton" id="menuButton"></i>
+                    <span id="sum-count"></span>
+                    </div>
+                </li>
+			</ul>
+		</div>
+		<div class="navbarbuttons">
+			<img src="images/search.png" style="margin-right: 20px;margin-top: 3px;" class="openBtn" onclick="openSearch()">
+			<input type="checkbox" class="checkbox">
+			<div class="sidemenu">
+				<ul>
+				    <li><a href="Hungry Point" class="line">Account</a></li>
+			        <li><a href="#" class="line">Blogs</a></li>
+			        <li><a href="#" class="line">Your Orders</a></li>
+			        <li><a href="#" class="line">Cancel Order</a></li>
+			        <li><a href="#" class="line">Track Order</a></li>
+			    <li class="design">
+			        <i class="fa fa-copyright" style="margin-left: 20px;"> 2021 Copyright</i><br>
+                    <span style="margin-left: 20px;">Designed By Lavanya</span>
+                </li>
+		        </ul>
+	        </div>
+		</div>
+	</div>
+
+	<!--search button fullscreen-->
+<div id="mysearch_fullscreen" class="search_fullscreen">
+  <span class="closebtn" onclick="closeSearch()">×</span>
+  <div class="search_fullscreen-content">
+    <form>
+      <input type="text" placeholder="Search.." name="search">
+      <i class="fa fa-search" id="submit-search"></i>
+    </form>
+  </div>
+</div>
+</header>
+
+
+<!---for add to cart checkout-->
+<div class="for-scroll hide">
+            <div class="top">
+                 <button id="closeButton"><i class="fas fa-times-circle"></i></button>
+            </div>
+        <div class="display-flex">
+            <div id="container2">  
+            </div>
+            <footer id="details">
+                <div class="clearfix" id="container3">
+                    <h2>Confirm Your Order</h2>
+                    <div class="customer_id">
+                        <div><img src="images/id.svg"></div>
+                        <div>
+                            <span style="color: rgba(0,0,0,85%);">Lavanya</span><br>
+                            <span>8360033042</span>
+                        </div>
+                        <div id="edit">
+                            <i ></i>
+                            Edit
+                        </div>
+                    </div>
+                    <div id="input">
+                        <div>
+                            <input type="text" name="" placeholder="Enter Pincode">
+                        </div>
+                        <div id="check_delivery">
+                            Check&nbsp;Delivery
+                        </div>
+                    </div>
+                    <div id="coupon">
+                        <div><img src="images/coupon.svg"></div>
+                        <div id="margin-coupon">Apply Coupon</div>
+                    </div>
+                    <h3 id="price-heading">Price Details</h3>
+                    <div id="prices">
+                        <div class="left">
+                            <h4>Subtotal:</h4>
+                            <h4>Taxes&nbsp;(2%):</h4>
+                            <h4>Shipping:</h4>
+                        </div>
+                    <div class="item-price">
+                        <h3 class="subtotal"><span id="sum-prices"></span></h3>
+                        <h3 class="tax"><span id="tax"></span></h3>
+                        <h3 class="shipping"><span id="shipping">Free</span></h3>
+                    </div>
+                </div>
+
+            <div class="right">
+                <h1 class="total">Grand Total: <span id="total"></span></h1>
+                <a class="checkout checkout hidden">Checkout</a>
+            </div>
+
+        </div>
+    </footer>
+        </div>
+    </div>
+
+
+
+    <!---About us page code starts here--->
+
+
+
+<div class="about-container">
+    <h3>Good And Healthy Life</h3>
+    <h1>We Served The<br> Best <span style="color: #84b813;">Food </span>In Town</h1>
+</div>
+<div class="progress-container">
+    <div class="progress-left">
+    <div class="progress1">
+         <span id="_1">Fresh & Organic</span>
+        <span id="_88">88%</span>
+    </div>
+    <div class="progress1">
+       <span id="_2">Easy Reservation</span>
+        <span id="_78">78%</span>
+    </div>
+    <div class="progress1">
+       <span id="_3">Quality Cuisine</span>
+        <span id="_94">94%</span>
+    </div>
+</div>
+ <div class="progress-right">
+    <div class="progress2">
+         <span id="_4">Professional Staff</span>
+        <span id="_85">85%</span>
+    </div>
+    <div class="progress2">
+       <span id="_5">24/7 food Delivery</span>
+        <span id="_90">90%</span>
+    </div>
+</div>
+</div>
+
+</div>
+
+
+<!--footer-->
+<div class="footer">
+    <div class="footer-flex">
+    <i id="icon-1" class="fab fa-facebook-f"></i>
+    <i id="icon-2" class="fab fa-twitter"></i>
+    <i id="icon-3" class="fab fa-google"></i>
+    <i id="icon-4" class="fab fa-linkedin-in"></i>
+    <i id="icon-5" class="fab fa-instagram"></i>
+</div>
+<center><span>@ HungryPoint ----------------- Made by Lavanya</span></center>
+</div>
+
+
+
+
+</body>
+<script src="javascript/search.js"></script>
+<script src="javascript/cartpage.js"></script>
+<script src="javascript/shopping-cart.js"></script>
+</html>

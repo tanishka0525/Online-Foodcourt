@@ -1,0 +1,272 @@
+.main-div {
+	background: #f6f5f7;
+	padding-top: 50px;
+	padding-left: 130px;
+}
+.main-div p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+.main-div span {
+	font-size: 12px;
+}
+.main-div a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+.click-button,.changing-button {
+	border-radius: 20px;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+.changing-button{
+	background: transparent;
+	border:1px solid white;
+}
+.click-button{
+	border: 0px;
+	background-color: #84b813;
+	margin-top: 10px;
+}
+.click-button:hover{
+	background-color: #e02f46;
+}
+
+.form-container button:active {
+	transform: scale(0.95);
+}
+
+.form-container button:focus {
+	outline: none;
+}
+.form-container form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	text-align: center;
+}
+
+.form-container input,.form-container select {
+	background-color: #eee;
+	border: none;
+	padding: 12px 10px;
+	margin: 8px 0;
+	padding-right: 25px;
+}
+.login input{
+	width: 400px;
+}
+.signup input, .signup select{
+	width: 250px;
+}
+.form-container input:focus{
+	outline: none;
+}
+.form-container input[type=number]::-webkit-outer-spin-button,
+.form-container input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.register {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 1100px;
+	min-height: 480px;
+}
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+.login {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+.register.motion .login {
+	transform: translateX(100%);
+}
+.signup {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+.register.motion .signup {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+.spread {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+.register.motion .spread{
+	transform: translateX(-100%);
+}
+
+.overlap {
+	background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.register.motion .overlap {
+  	transform: translateX(50%);
+}
+
+.wrapper10 {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.wrapper-left {
+	transform: translateX(-20%);
+}
+
+.register.motion .wrapper-left {
+	transform: translateX(0);
+}
+
+.wrapper-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.register.motion .wrapper-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+.input-flex{
+	display: flex;
+}
+.input-right{
+	margin-left: 20px;
+}
+.indicator{
+	position: absolute;
+	margin-left: -17px;
+	margin-top: 22px;
+	width: 10px;
+	height: 10px;
+	background: transparent;
+	border-radius: 50%;
+}
+#validFirstname.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validFirstname.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
+#validLastname.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validLastname.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
+
+#validemail.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validemail.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
+#validtel.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validtel.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
+#validconfirm.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validconfirm.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
+#validemail2.valid .indicator{
+	background: #0f0;
+	box-shadow: 0 0 5px #0f0,0 0 10px #0f0,0 0 20px #0f0,0 0 40px #0f0;
+}
+#validemail2.invalid .indicator{
+	background: #f00;
+	box-shadow: 0 0 5px #f00,0 0 10px #f00,0 0 20px #f00,0 0 40px #f00;
+			}
